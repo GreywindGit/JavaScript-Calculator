@@ -1,16 +1,24 @@
 function main() {
   var $operation = null;
+  var $equalPressed = false;
   $('.num-button').on('click', function() {
-	document.getElementById('display').value += $(this).html();
+    if(document.getElementById('display').value === '0' || $equalPressed) {
+        document.getElementById('display').value = $(this).html();
+        $equalPressed = false;
+    }
+    else {
+        document.getElementById('display').value += $(this).html();
+    }
   })
   $('.operator-button').on('click', function() {
-	if(!$operation) {
-  	document.getElementById('display').value += $(this).html();
-	}
-	else {
-  	document.getElementById('display').value = document.getElementById('display').value.slice(0, -1) + $(this).html();
-	}
-	$operation = $(this).html();
+        if(!$operation || $equalPressed) {
+            document.getElementById('display').value += $(this).html();
+            $equalPressed = false;
+        }
+        else {
+            document.getElementById('display').value = document.getElementById('display').value.slice(0, -1) + $(this).html();
+        }
+        $operation = $(this).html();
   })
   $('#btn-equal').on('click', function() {
 	var $operationString = document.getElementById('display').value;
@@ -58,6 +66,7 @@ function main() {
 	}
 	document.getElementById('display').value = $result;
 	$operation = null;
+    $equalPressed = true;
   })
   $('#btn-clear-all').on('click', function() {
 	document.getElementById('display').value = '0';
