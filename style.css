@@ -57,3 +57,15 @@ button {
 #btn-nine, #btn-six, #btn-three, #btn-dot {
     margin-right: 10px;
 }
+
+.num-button:active {
+    background-color: thistle;
+}
+
+.operator-button:active, #btn-equal:active {
+    background-color: moccasin;
+}
+
+.func-button:active {
+    background-color: lightgreen;
+}
