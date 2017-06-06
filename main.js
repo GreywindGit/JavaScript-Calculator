@@ -70,6 +70,7 @@ function main() {
   })
   $('#btn-clear-all').on('click', function() {
 	document.getElementById('display').value = '0';
+    $operation = null;
   })
 	$('#btn-clear-one').on('click', function() {
 	var $operationString = document.getElementById('display').value;
