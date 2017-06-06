@@ -76,11 +76,14 @@ function main() {
 	var $operationString = document.getElementById('display').value;
 	var $operationIndex = $operationString.indexOf($operation);
 	if($operationIndex !== -1) {
-  	document.getElementById('display').value = $operationString.slice(0, $operationIndex + 1);
+  	    document.getElementById('display').value = $operationString.slice(0, $operationIndex + 1);
 	}
-	else {
-  	document.getElementById('display').value = $operationString;
+	else if($equalPressed) {
+  	    document.getElementById('display').value = $operationString;
 	}
+    else {
+        document.getElementById('display').value = '0';
+    }
   })
 }
  
