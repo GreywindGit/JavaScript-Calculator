@@ -1,3 +1,14 @@
+* {
+    font-family: 'Avenir Book', sans-serif;
+}
+
+body {
+    background-image: url("codecool_background.png");
+    background-repeat: no-repeat;
+    background-size: 92%;
+    background-color: #FCFCFC;
+}   
+
 h1 {
     text-align: center;
 }
@@ -10,7 +21,7 @@ h1 {
     height: 400px;
     width: 350px;
     padding: 50px;
-    margin-left: 30%;
+    margin-left: 37%;
     margin-top: 5%;
 }
 
@@ -22,10 +33,13 @@ h1 {
     margin-bottom: 50px;
     border-color: lightgrey;
     box-shadow: 1px 1px 1px lightgrey;
+    padding-right: 5px;
+    padding-top: 10px;
 }
 
 button {
     margin-bottom: 12px;
+    border-radius: 5px;
 }
  
 .num-button, .operator-button, .func-button {
@@ -68,4 +82,9 @@ button {
 
 .func-button:active {
     background-color: lightgreen;
+}
+
+@font-face {
+    font-family: 'Avenir Book';
+    src: url('AvenirLTStd-Book.otf')
 }
