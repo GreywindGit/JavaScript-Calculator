@@ -16,7 +16,7 @@ function main() {
             $equalPressed = false;
         }
         else {
-            document.getElementById('display').value = document.getElementById('display').value.slice(0, -1) + $(this).html();
+            document.getElementById('display').value = document.getElementById('display').value.slice(0, document.getElementById('display').value.indexOf($operation)) + $(this).html();
         }
         $operation = $(this).html();
   })
